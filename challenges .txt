@@ -1,3 +1,5 @@
+Paths, ls, File Timestamps and Types, Viewing Files
+
 Challenge #1
 
 Move into the current user’s home directory using the cd command.
