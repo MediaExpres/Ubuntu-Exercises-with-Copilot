@@ -55,3 +55,21 @@ ls /home/student/Desktop/
 ls ~/Desktop/
 ls ../../home/student/Desktop/
 
+
+Challenge #4
+
+Display the man page of ls and search for -d option.
+Display the contents of /var/log using a long listing format.
+Display information about the /var/log directory in a long listing format.
+Display the contents of /etc on a single column.
+Display all the files and directories (including hidden ones) from the user's home directory.
+
+Here are the steps to complete the challenge #4:
+
+To display the man page of ls and search for -d option, you can type man ls in the terminal. This will open the manual page for the ls command, which shows the usage and options of the command. To search for the -d option, you can type / followed by -d and press Enter. This will highlight the first occurrence of the -d option in the man page. The -d option is used to list directories themselves, not their contents. To find the next occurrence of the -d option, you can press n. To exit the man page, you can press q.
+To display the contents of /var/log using a long listing format, you can type ls -l /var/log in the terminal. This will show you all the files and directories in the /var/log directory, along with their permissions, ownership, size, modification date, and name. The -l option is used to use a long listing format, which provides more information than the default format.
+To display information about the /var/log directory in a long listing format, you can type ls -ld /var/log in the terminal. This will show you only the information about the /var/log directory itself, not its contents. The -d option is used to list directories themselves, not their contents. The -l option is used to use a long listing format, as before.
+To display the contents of /etc on a single column, you can type ls -1 /etc in the terminal. This will show you all the files and directories in the /etc directory, one per line. The -1 option is used to list one file per line, which creates a single column output.
+To display all the files and directories (including hidden ones) from the user’s home directory, you can type ls -a ~ in the terminal. This will show you all the files and directories in the user’s home directory, including those whose names start with a dot (.), which are hidden by default. The -a option is used to show all files, including hidden ones. The tilde (~) is used to represent the user’s home directory.
+*** Dumitrescu solution is with -la 
+
