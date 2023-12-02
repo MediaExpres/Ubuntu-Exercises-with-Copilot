@@ -1,0 +1,13 @@
+Challenge #1
+
+Move into the current user’s home directory using the cd command.
+List the contents of /etc using the ls command and an absolute path.
+Display the contents of /var/log/dmesg using the cat command and an absolute path.
+Move into the root directory (/) using an absolute path.
+List the contents of /etc using the ls command and an absolute path.
+
+To move into the current user’s home directory using the cd command, you can type cd ~ or cd $HOME in the terminal. The tilde (~) and the environment variable $HOME both represent the current user’s home directory.
+To list the contents of /etc using the ls command and an absolute path, you can type ls /etc in the terminal. This will show you all the files and directories in the /etc directory, which contains system configuration files.
+To display the contents of /var/log/dmesg using the cat command and an absolute path, you can type cat /var/log/dmesg in the terminal. This will show you the output of the dmesg command, which prints the messages from the kernel ring buffer. The /var/log/dmesg file stores these messages for later inspection.
+To move into the root directory (/) using an absolute path, you can type cd / in the terminal. This will change your current working directory to the root directory, which is the top-level directory in the file system hierarchy.
+To list the contents of /etc using the ls command and an absolute path, you can repeat the same command as before: ls /etc. This will show you the same output as before, since you are listing the same directory.
