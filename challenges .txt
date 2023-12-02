@@ -73,3 +73,17 @@ To display the contents of /etc on a single column, you can type ls -1 /etc in t
 To display all the files and directories (including hidden ones) from the user’s home directory, you can type ls -a ~ in the terminal. This will show you all the files and directories in the user’s home directory, including those whose names start with a dot (.), which are hidden by default. The -a option is used to show all files, including hidden ones. The tilde (~) is used to represent the user’s home directory.
 *** Dumitrescu solution is with -la 
 
+Challenge #5
+
+Display the contents of /var/log sorted by size in a human-readable format.
+Rerun the previous command adding an option that omits the files that end in .log from listing.
+List the contents of /etc recursively.
+
+steps to complete the challenge #5:
+
+To display the contents of /var/log sorted by size in a human-readable format, you can type ls -Sh /var/log in the terminal. This will show you all the files and directories in the /var/log directory, sorted by size in descending order, and with a suffix indicating the size unit (such as K for kilobytes, M for megabytes, etc.). The -S option is used to sort by size, and the -h option is used to make the sizes human-readable.
+*** AI solution gives bytes in absolute numbers, Dumitrescu solution: -lSh gives the M, K bytes suffix
+To rerun the previous command adding an option that omits the files that end in .log from listing, you can type ls -Sh --ignore='*.log' /var/log in the terminal. This will show you the same output as before, but without the files that end in .log. The --ignore option is used to exclude files that match a pattern, and the ‘*.log’ is a wildcard pattern that matches any file that ends with .log.
+*** Dumitrescu: --hide=*.log 
+To list the contents of /etc recursively, you can type ls -R /etc in the terminal. This will show you all the files and directories in the /etc directory, and also the files and directories in its subdirectories, and so on. The -R option is used to list recursively, which means to list all levels of the directory tree.
+*** Dumitrescu: ls -lR /etc 
