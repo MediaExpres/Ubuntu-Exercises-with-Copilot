@@ -34,3 +34,24 @@ To list the contents of /etc using the ls command and an absolute path, you can 
 To list the contents of /etc using the ls command and a relative path, you need to know the relative path from the current working directory to the /etc directory. Since the current working directory is the home directory of the current user, the relative path to the /etc directory is ../../etc. The ../../ represents the parent directory of the parent directory of the current directory, which is the root directory (/). To list the contents of the /etc directory using a relative path, you can type `ls ../../etc` in the terminal.
 To display the contents of /var/log/dmesg using the cat command and an absolute path, you can type `cat /var/log/dmesg` in the terminal, as mentioned before. This will show you the same output as before, since you are displaying the same file.
 To display the contents of /var/log/dmesg using the cat command and a relative path, you need to know the relative path from the current working directory to the /var/log/dmesg file. Since the current working directory is the home directory of the current user, the relative path to the /var/log/dmesg file is ../../var/log/dmesg. To display the contents of the /var/log/dmesg file using a relative path, you can type `cat ../../var/log/dmesg` in the terminal.
+
+Challenge #3
+
+Move into the root directory (/) using the cd command and an absolute path.
+Display the contents of /var/log/boot.log using the cat command and a relative path.
+Run the previous command as root.
+Move to /var/log directory using an absolute path.
+Display the contents of the Desktop directory using both an absolute and relative path.
+Here are the steps to complete the challenge #3:
+
+- To move into the root directory (/) using the cd command and an absolute path, you can type `cd /` in the terminal. This will change your current working directory to the root directory, which is the top-level directory in the file system hierarchy.
+- To display the contents of /var/log/boot.log using the cat command and a relative path, you need to know the relative path from the current working directory to the /var/log/boot.log file. Since the current working directory is the root directory (/), the relative path to the /var/log/boot.log file is var/log/boot.log. To display the contents of the /var/log/boot.log file using a relative path, you can type `cat var/log/boot.log` in the terminal. This will show you the messages from the boot process of the system.
+*** the above throws error sudo is needed 
+- To run the previous command as root, you need to use the sudo command, which allows you to execute commands as another user, usually the superuser or root. The root user has the highest privileges and can access and modify any file or directory on the system. To run the previous command as root, you can type `sudo cat var/log/boot.log` in the terminal. This will prompt you to enter your password, and then display the contents of the /var/log/boot.log file as root.
+- To move to /var/log directory using an absolute path, you can type `cd /var/log` in the terminal. This will change your current working directory to the /var/log directory, which contains various log files from different system services and applications.
+- To display the contents of the Desktop directory using both an absolute and relative path, you need to know the absolute and relative paths from the current working directory to the Desktop directory. The absolute path of the Desktop directory is /home/username/Desktop, where username is the name of the current user. You can find out the name of the current user by typing `whoami` in the terminal. The relative path of the Desktop directory is ../../home/username/Desktop, which means going up two levels from the current directory (/var/log) to the root directory (/), and then going down to the home directory (/home), the user's home directory (/home/username), and the Desktop directory (/home/username/Desktop). To display the contents of the Desktop directory using an absolute path, you can type `ls /home/username/Desktop` in the terminal. To display the contents of the Desktop directory using a relative path, you can type `ls ../../home/username/Desktop` in the terminal. Both commands will show you the same output, which is the list of files and directories on the Desktop.
+*** no ~ command as instructed in Dumitrescu solutions:
+ls /home/student/Desktop/
+ls ~/Desktop/
+ls ../../home/student/Desktop/
+
