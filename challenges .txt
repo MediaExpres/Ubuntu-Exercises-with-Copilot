@@ -211,11 +211,26 @@ student@ubuntu-22:~$ file /dev/sda1
 ------/dev/tty1
 student@ubuntu-22:~$ ls -l /dev/tty1
 crw--w---- 1 root tty 4, 1 dec  2 23:18 /dev/tty1
+student@ubuntu-22:~$ ls -F /dev/tty1
+/dev/tty1
+student@ubuntu-22:~$ file /dev/tty1
+/dev/tty1: character special (4/1)
 
+------/run/initctl
+student@ubuntu-22:~$ ls -l /run/initctl
+prw------- 1 root root 0 dec  2 23:17 /run/initctl
+student@ubuntu-22:~$ ls -F /run/initctl
+/run/initctl|
+student@ubuntu-22:~$ file /run/initctl
+/run/initctl: fifo (named pipe)
 
-/run/initctl
-
-/run/snapd.socket
+------/run/snapd.socket
+student@ubuntu-22:~$ ls -l /run/snapd.socket
+srw-rw-rw- 1 root root 0 dec  2 23:18 /run/snapd.socket
+student@ubuntu-22:~$ ls -F /run/snapd.socket
+/run/snapd.socket=
+student@ubuntu-22:~$ file /run/snapd.socket
+/run/snapd.socket: socket
 
 COPILOT ANSWER:
 Here are the steps to complete the challenge #10:
