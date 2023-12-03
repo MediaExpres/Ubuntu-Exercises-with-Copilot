@@ -376,4 +376,15 @@ Here are the steps to complete the challenge #14:
 
  *** Dumitrescu: sudo su instead of sudo -i, more about the differences here: https://askubuntu.com/questions/434817/what-is-the-difference-between-sudo-i-and-su
 
-  
+
+Challenge #15
+
+Display the contents of the user’s home directory repeatedly every 2 seconds.
+Create a new file in the user's home directory and notice the differences between the refreshes.
+
+Here are the steps to complete the challenge #15:
+
+- To display the contents of the user’s home directory repeatedly every 2 seconds, you can use the watch command with the -n option. The watch command runs a command repeatedly and shows the output in the terminal. The -n option specifies the interval between each execution of the command, in seconds. To do this, you can type `watch -n 2 ls ~` in the terminal. This will run the ls command on the user's home directory, which is represented by the tilde (~), every 2 seconds and show the output in the terminal. You will see the output updated every 2 seconds, showing the current files and directories in the user's home directory.
+- To create a new file in the user's home directory and notice the differences between the refreshes, you can use the touch command in another terminal. The touch command creates an empty file or updates the timestamps of an existing file. To do this, you can type `touch ~/test.txt` in another terminal. This will create an empty file named test.txt in the user's home directory. You will notice that the output of the watch command in the first terminal will show the new file test.txt in the next refresh, along with its size and modification date. You can also delete the file by typing `rm ~/test.txt` in another terminal, and notice that the output of the watch command will not show the file test.txt in the next refresh.
+
+*** Dumitrescu solution: watch -d -n 2 ls
