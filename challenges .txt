@@ -125,3 +125,11 @@ Here are the steps to complete the challenge #8:
 - To consider the file called linux.txt created in the previous challenge, you can type `ls -l --full-time ~/linux.txt` in the terminal. This will show you the file permissions, ownership, size, and full timestamp of the file linux.txt in the user's home directory.
 - To notice its timestamps and then update them to the values of /etc/passwd, you can use the touch command with the -r option. The -r option is used to change the timestamps of a file to match those of another file. The /etc/passwd file is a system file that contains information about the users on the system, such as their usernames, passwords, user IDs, group IDs, home directories, and login shells. To do this, you can type `touch -r /etc/passwd ~/linux.txt` in the terminal. This will update the access, modification, and change time of the file linux.txt to match those of the file /etc/passwd.
 - To see the changes, you can type `stat ~/linux.txt` and `stat /etc/passwd` in the terminal. This will show you the file attributes and the file timestamps of both files. You will notice that the timestamps of linux.txt are now the same as those of /etc/passwd.
+
+Challenge #9
+
+List the contents of /var/log displaying the access time of the files and sorting by filenames in reverse order.
+
+Here are the steps to complete the challenge #9:
+
+- To list the contents of /var/log displaying the access time of the files and sorting by filenames in reverse order, you can use the ls command with the -u, -r, and -t options. The -u option is used to display the access time of the files, instead of the modification time. The -r option is used to reverse the order of the output, so that the files are sorted by filenames in descending order. The -t option is used to sort the files by time, which in this case is the access time. To do this, you can type `ls -urt /var/log` in the terminal. This will show you all the files and directories in the /var/log directory, along with their access time, sorted by filenames in reverse order.
