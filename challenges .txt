@@ -278,4 +278,14 @@ Here are the steps to complete the challenge #10:
   - The first character of the ls -l output indicates the file type, such as - for regular files, d for directories, l for symbolic links, b for block devices, c for character devices, p for FIFOs, and s for sockets.
   - The trailing character of the ls -F output indicates the file type, as explained before.
   - The file command output shows the file type and some additional information, such as text, binary, image, compressed, etc.
+
+  Challenge #11
+
+List the contents of /var/log/dmesg using the cat command and displaying the line numbers as well.
+
+student@ubuntu-22:~$ cat -n /var/log/dmesg
+
+*** Dumitrescu: totally mess, sends to something different cat -n /etc/resolv.conf
+
+
   
