@@ -291,5 +291,36 @@ To list the contents of /var/log/dmesg using the cat command and displaying the 
 
 *** Dumitrescu: totally mess, send as answer to something totally different: cat -n /etc/resolv.conf
 
+Challenge #12
+
+Display the contents of /etc/ssh/ssh_config page by page using less.
+Go to the end and then to the beginning of the file using the right shortcuts.
+Search forward for the string Ciphers 
+Quit less
+
+My take: 
+student@ubuntu-22:~$ less /etc/ssh/ssh_config
+G 
+g 
+/Ciphers 
+:q + Enter
+
+
+Copilot: 
+Here are the steps to complete the challenge #12:
+
+To display the contents of /etc/ssh/ssh_config page by page using less, you can type less /etc/ssh/ssh_config in the terminal. This will open the file in the less command, which is a pager program that allows you to view large files in a scrollable and searchable way. The /etc/ssh/ssh_config file contains the global configuration options for the OpenSSH client, such as the host name, port number, encryption algorithms, authentication methods, etc.
+To go to the end and then to the beginning of the file using the right shortcuts, you can use the following keys in the less command:
+To go to the end of the file, you can press G. This will move the cursor to the last line of the file and show the end-of-file marker (EOF).
+To go to the beginning of the file, you can press g. This will move the cursor to the first line of the file and show the beginning-of-file marker (BOF).
+To search forward for the string Ciphers, you can use the following steps in the less command:
+To start a forward search, you can press /. This will prompt you to enter a pattern to search for.
+To enter the string Ciphers, you can type Ciphers and press Enter. This will highlight the first occurrence of the string Ciphers in the file and move the cursor to that line.
+To find the next occurrence of the string Ciphers, you can press n. This will highlight the next occurrence of the string Ciphers in the file and move the cursor to that line.
+To repeat the search, you can press n again, until you reach the end of the file or the string Ciphers is not found.
+To quit less, you can press q. This will exit the less command and return to the terminal prompt.
+
+
+
 
   
