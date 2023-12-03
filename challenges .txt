@@ -285,7 +285,11 @@ List the contents of /var/log/dmesg using the cat command and displaying the lin
 
 student@ubuntu-22:~$ cat -n /var/log/dmesg
 
-*** Dumitrescu: totally mess, sends to something different cat -n /etc/resolv.conf
+Copilot is right: 
+Here are the steps to complete the challenge #11:
+To list the contents of /var/log/dmesg using the cat command and displaying the line numbers as well, you can use the cat command with the -n option. The -n option is used to number all output lines, starting from 1. To do this, you can type cat -n /var/log/dmesg in the terminal. This will show you the output of the dmesg command, which prints the messages from the kernel ring buffer, along with the line numbers. The /var/log/dmesg file stores these messages for later inspection.
+
+*** Dumitrescu: totally mess, send as answer to something totally different: cat -n /etc/resolv.conf
 
 
   
