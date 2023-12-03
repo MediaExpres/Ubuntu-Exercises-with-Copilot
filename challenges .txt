@@ -322,6 +322,40 @@ To repeat the search, you can press n again, until you reach the end of the file
 To quit less, you can press q. This will exit the less command and return to the terminal prompt.
 
 
+Challenge #13
+
+Display the first 3 lines of /etc/passwd
+Display the last 5 lines of /etc/shadow
+Display the contents of /etc/group starting with line 5 
+
+student@ubuntu-22:~$ head -n 3 /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+
+student@ubuntu-22:~$ tail -n 5 /etc/shadow
+tail: cannot open '/etc/shadow' for reading: Permission denied
+student@ubuntu-22:~$ sudo tail -n 5 /etc/shadow
+[sudo] password for student: 
+user2:$y$j9T$9APMnJitc2VzPTmRwQvfv0$gLGQzPvMqrlJe0FuudGwo1LrnUigz6Mg.DqvT3FHsh1:19561:0:99999:7:::
+u2:!:19561:0:99999:7::19722:
+Thor:$y$j9T$GvreczNw4S5Uu9ohPbOha.$i6ZSvK690CQvoILCzJh3W0SitfgoO/OmxRWiTu8Cwo8:19561:0:99999:7:::
+u3:!:19561:0:99999:7:::
+sshd:*:19561:0:99999:7:::
+
+student@ubuntu-22:~$ tail -n +5 /etc/group
+adm:x:4:syslog,student
+tty:x:5:
+disk:x:6:
+...................
+
+Copilot:
+Here are the steps to complete the challenge #13:
+
+- To display the first 3 lines of /etc/passwd, you can use the head command with the -n option. The head command shows the beginning of a file, and the -n option specifies the number of lines to display. To do this, you can type `head -n 3 /etc/passwd` in the terminal. This will show you the first 3 lines of the /etc/passwd file, which contains information about the users on the system, such as their usernames, passwords, user IDs, group IDs, home directories, and login shells.
+- To display the last 5 lines of /etc/shadow, you can use the tail command with the -n option. The tail command shows the end of a file, and the -n option specifies the number of lines to display. To do this, you can type `tail -n 5 /etc/shadow` in the terminal. This will show you the last 5 lines of the /etc/shadow file, which contains the encrypted passwords of the users on the system, along with some password aging information, such as the last change date, the minimum and maximum password age, the warning period, the inactivity period, and the expiration date.
+- To display the contents of /etc/group starting with line 5, you can use the tail command with the -n option and a + sign. The tail command shows the end of a file, and the -n option specifies the number of lines to display. However, if you add a + sign before the number, it means to display the lines starting from that number, counting from the beginning of the file. To do this, you can type `tail -n +5 /etc/group` in the terminal. This will show you the contents of the /etc/group file, starting from line 5. The /etc/group file contains information about the groups on the system, such as their names, passwords, group IDs, and members.
+
 
 
   
