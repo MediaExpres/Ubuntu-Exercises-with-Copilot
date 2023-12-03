@@ -133,3 +133,5 @@ List the contents of /var/log displaying the access time of the files and sortin
 Here are the steps to complete the challenge #9:
 
 - To list the contents of /var/log displaying the access time of the files and sorting by filenames in reverse order, you can use the ls command with the -u, -r, and -t options. The -u option is used to display the access time of the files, instead of the modification time. The -r option is used to reverse the order of the output, so that the files are sorted by filenames in descending order. The -t option is used to sort the files by time, which in this case is the access time. To do this, you can type `ls -urt /var/log` in the terminal. This will show you all the files and directories in the /var/log directory, along with their access time, sorted by filenames in reverse order.
+
+*** Dumitrescu solution: ls -lu --reverse /var/log
