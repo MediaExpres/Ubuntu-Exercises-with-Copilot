@@ -179,12 +179,39 @@ file /var
 /var: directory
 
 /vmlinuz
+student@ubuntu-22:~$ ls -l /boot/vmlinuz
+lrwxrwxrwx 1 root root 24 dec  2 18:25 /boot/vmlinuz -> vmlinuz-6.2.0-37-generic
 
-/usr/bin/ls
+student@ubuntu-22:~$ ls -F /boot/vmlinuz
+/boot/vmlinuz@
 
+student@ubuntu-22:~$ file /boot/vmlinuz
+/boot/vmlinuz: symbolic link to vmlinuz-6.2.0-37-generic
+
+------/usr/bin/ls
+student@ubuntu-22:~$ ls -l /usr/bin/ls
+-rwxr-xr-x 1 root root 138208 feb  7  2022 /usr/bin/ls
+
+student@ubuntu-22:~$ ls -F /usr/bin/ls
+/usr/bin/ls*
+
+student@ubuntu-22:~$ file /usr/bin/ls
+/usr/bin/ls: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=897f49cafa98c11d63e619e7e40352f855249c13, for GNU/Linux 3.2.0, stripped
+
+------/dev/sda1
+student@ubuntu-22:~$ ls -l /dev/sda1
+brw-rw---- 1 root disk 8, 1 dec  2 23:18 /dev/sda1
+
+student@ubuntu-22:~$ ls -F /dev/sda1
 /dev/sda1
 
-/dev/tty1
+student@ubuntu-22:~$ file /dev/sda1
+/dev/sda1: block special (8/1)
+
+------/dev/tty1
+student@ubuntu-22:~$ ls -l /dev/tty1
+crw--w---- 1 root tty 4, 1 dec  2 23:18 /dev/tty1
+
 
 /run/initctl
 
