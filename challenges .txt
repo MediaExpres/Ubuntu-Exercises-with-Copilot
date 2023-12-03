@@ -303,7 +303,8 @@ student@ubuntu-22:~$ less /etc/ssh/ssh_config
 G 
 g 
 /Ciphers 
-:q + Enter
+q 
+
 
 
 Copilot: 
