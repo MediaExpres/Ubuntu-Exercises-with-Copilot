@@ -1,3 +1,4 @@
+Challenge #1
 Create the following directory structure
 
 student@ubuntu-22:~$ tree ~/linux
@@ -13,7 +14,7 @@ student@ubuntu-22:~$ tree ~/linux
 3 directories, 4 files
 student@ubuntu-22:~$
 
-My solution: I did it with GUI :)
+My solution: I did it with GUI after I screwed it with something simmilar Dumitrescu's solution :)
 
 Copilot solution:
 To create the directory structure that you requested, you can use the following commands in your terminal:
@@ -38,3 +39,50 @@ student@ubuntu-22:~$ tree ~/linux
 3 directories, 4 files
 student@ubuntu-22:~$
 I hope this helps you to create the directory structure that you wanted. If you need more information, you can search the web
+
+
+Challenge #2
+
+Considering this directory structure, copy the file called security.txt  to the updates directory.
+
+My solution: 
+
+student@ubuntu-22:~$ cp ~/security.txt ~/updates
+cp: cannot stat '/home/student/security.txt': No such file or directory
+student@ubuntu-22:~$ cd centos
+bash: cd: centos: No such file or directory
+student@ubuntu-22:~$ cd linux
+student@ubuntu-22:~/linux$ cd student
+bash: cd: student: No such file or directory
+student@ubuntu-22:~/linux$ cd centos
+student@ubuntu-22:~/linux/centos$ cp security.txt ~/updates
+student@ubuntu-22:~/linux/centos$ tree ~/linux
+/home/student/linux
+├── centos
+│   ├── commands.txt
+│   ├── security.txt
+│   └── updates
+│       └── latest
+└── ubuntu
+    └── apt.txt
+3 directories, 4 files
+student@ubuntu-22:~/linux/centos$ cp ~/linux/centos/security.txt ~/linux/centos/updates
+student@ubuntu-22:~/linux/centos$ tree ~linux
+~linux  [error opening dir]
+0 directories, 0 files
+student@ubuntu-22:~/linux/centos$ tree ~/linux
+/home/student/linux
+├── centos
+│   ├── commands.txt
+│   ├── security.txt
+│   └── updates
+│       ├── latest
+│       └── security.txt
+└── ubuntu
+    └── apt.txt
+
+3 directories, 5 files
+
+student@ubuntu-22:~/linux/centos$ ^C
+
+student@ubuntu-22:~/linux/centos$ 
