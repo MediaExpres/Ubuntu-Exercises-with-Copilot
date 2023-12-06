@@ -82,7 +82,15 @@ student@ubuntu-22:~/linux/centos$ tree ~/linux
     └── apt.txt
 
 3 directories, 5 files
-
 student@ubuntu-22:~/linux/centos$ ^C
-
 student@ubuntu-22:~/linux/centos$ 
+
+COPILOT solution:
+To copy the file called security.txt to the updates directory, you can use the following command in your terminal:
+
+- First, you need to navigate to the centos subdirectory inside the linux directory, where the security.txt file is located. You can use the command `cd ~/linux/centos` to do that.
+- Next, you need to use the cp command to copy the security.txt file to the updates subdirectory. You can use the command `cp security.txt updates` to do that. The cp command will copy the file from the source to the destination, preserving the original file. You can also use the -v option to see the details of the copying process, such as `cp -v security.txt updates`.
+- Alternatively, you can use the full path of the source and destination files, without changing the current directory. You can use the command `cp ~/linux/centos/security.txt ~/linux/centos/updates` to do that.
+
+After running the command, you should have a copy of the security.txt file in the updates directory. 
+
