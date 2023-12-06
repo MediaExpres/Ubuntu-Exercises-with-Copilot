@@ -94,3 +94,7 @@ To copy the file called security.txt to the updates directory, you can use the f
 
 After running the command, you should have a copy of the security.txt file in the updates directory. 
 
+Challenge #3
+
+Considering the solution from the previous challenge remove the file called security.txt from the directory called updates.
+
