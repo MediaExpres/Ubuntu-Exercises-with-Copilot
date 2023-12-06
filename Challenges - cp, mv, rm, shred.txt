@@ -130,3 +130,43 @@ First, you need to navigate to the centos subdirectory inside the linux director
 Next, you need to use the rm command to remove the security.txt file from the updates directory. You can use the command rm updates/security.txt to do that. The rm command will delete the file permanently, without moving it to the trash. You can also use the -v option to see the details of the deletion process, such as rm -v updates/security.txt.
 Alternatively, you can use the full path of the file, without changing the current directory. You can use the command rm ~/linux/centos/updates/security.txt to do that.
 After running the command, you should have removed the security.txt file from the updates directory.
+
+Challenge #4
+
+Considering the initial directory structure, copy the directory called updates from centos to ubuntu.
+
+Challenge #5
+
+Considering the solution from the previous challenge, remove the directory called updates from ubuntu directory.
+ 
+
+Challenge #6
+
+Considering the initial directory structure and using only one command copy the file called apt.txt and the directory called updates to linux directory.
+ 
+
+Challenge #7
+
+Considering the solution from the previous challenge remove the file called apt.txt and the directory called updates from the linux directory interactively (by prompting the user).
+ 
+
+Challenge #8
+
+Considering the initial directory structure, rename the directory called centos to redhat and then back to centos.
+ 
+
+Challenge #9
+
+Considering the initial directory structure, copy the file called security.txt to ubuntu directory as sec.txt
+ 
+
+Challenge #10
+
+Create a file named users.txt by redirecting the output of the who command.
+Display the file contents.
+Remove the file in a secure manner by overwriting the file 50 times before removing it.
+ 
+
+Challenge #11
+
+Remove the entire directory structure without prompting.
