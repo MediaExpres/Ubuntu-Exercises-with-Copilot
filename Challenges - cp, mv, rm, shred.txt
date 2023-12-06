@@ -98,3 +98,28 @@ Challenge #3
 
 Considering the solution from the previous challenge remove the file called security.txt from the directory called updates.
 
+My solution:
+student@ubuntu-22:~/linux/centos$ tree ~/linux
+/home/student/linux
+├── centos
+│   ├── commands.txt
+│   ├── security.txt
+│   └── updates
+│       ├── latest
+│       └── security.txt
+└── ubuntu
+    └── apt.txt
+3 directories, 5 files
+student@ubuntu-22:~/linux/centos$ rm ~/linux/centos/updates/security.txt
+student@ubuntu-22:~/linux/centos$ tree ~/linux
+/home/student/linux
+├── centos
+│   ├── commands.txt
+│   ├── security.txt
+│   └── updates
+│       └── latest
+└── ubuntu
+    └── apt.txt
+3 directories, 4 files
+student@ubuntu-22:~/linux/centos$
+
