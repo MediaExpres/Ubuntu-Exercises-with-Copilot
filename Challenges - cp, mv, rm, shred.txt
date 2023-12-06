@@ -1,0 +1,25 @@
+Create the following directory structure
+
+student@ubuntu-22:~$ tree ~/linux
+
+/home/student/linux
+
+├── centos
+
+│   ├── commands.txt
+
+│   ├── security.txt
+
+│   └── updates
+
+│       └── latest
+
+└── ubuntu
+
+    └── apt.txt
+
+
+
+3 directories, 4 files
+
+student@ubuntu-22:~$
