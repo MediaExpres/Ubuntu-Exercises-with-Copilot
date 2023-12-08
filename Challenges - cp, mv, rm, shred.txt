@@ -176,6 +176,16 @@ student@ubuntu-22:~/linux/centos$ tree ~/linux
 3 directories, 4 files
 student@ubuntu-22:~/linux/centos$ 
 
+Dumitrescu: rm -rf ~/linux/ubunu/updates 
+
+difference explained by Copilot:
+
+what is the difference between  rm -rf and rm -r in ubuntu terinal
+Copy
+Searching for: rm -rf and rm -r in ubuntu terminal
+Generating answers for you…
+The difference between rm -rf and rm -r in Ubuntu terminal is that the -f option means force, which means it will ignore nonexistent files, never prompt, and delete everything without asking. The -r option means recursive, which means it will delete the directory and its contents, including subdirectories. If you use rm -r without -f, you may be asked to confirm some deletions, especially if the files are write-protected. If you use rm -rf, you will not be asked anything, and all the files and directories will be deleted permanently. Therefore, you should be very careful when using rm -rf, as it can cause data loss or damage if you make a mistake.
+
 Challenge #6
 Considering the initial directory structure and using only one command copy the file called apt.txt and the directory called updates to linux directory.
  
