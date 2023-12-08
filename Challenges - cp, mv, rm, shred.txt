@@ -132,41 +132,38 @@ Alternatively, you can use the full path of the file, without changing the curre
 After running the command, you should have removed the security.txt file from the updates directory.
 
 Challenge #4
-
 Considering the initial directory structure, copy the directory called updates from centos to ubuntu.
 
-Challenge #5
+Copilot:
+To copy the directory called updates from centos to ubuntu, you can use the `cp` command with the `-r` option, which means recursive. The syntax is `cp -r source destination`. In this case, the source is `/home/student/linux/centos/updates` and the destination is `/home/student/linux/ubuntu`. So, the command would be:
 
+```bash
+cp -r /home/student/linux/centos/updates /home/student/linux/ubuntu
+```
+
+This will copy the updates directory and its contents to the ubuntu directory. You can verify the result by using the `tree` command again.
+
+Challenge #5
 Considering the solution from the previous challenge, remove the directory called updates from ubuntu directory.
  
 
 Challenge #6
-
 Considering the initial directory structure and using only one command copy the file called apt.txt and the directory called updates to linux directory.
  
-
 Challenge #7
-
 Considering the solution from the previous challenge remove the file called apt.txt and the directory called updates from the linux directory interactively (by prompting the user).
  
-
 Challenge #8
-
 Considering the initial directory structure, rename the directory called centos to redhat and then back to centos.
- 
 
 Challenge #9
-
 Considering the initial directory structure, copy the file called security.txt to ubuntu directory as sec.txt
  
-
 Challenge #10
-
 Create a file named users.txt by redirecting the output of the who command.
 Display the file contents.
 Remove the file in a secure manner by overwriting the file 50 times before removing it.
  
 
 Challenge #11
-
 Remove the entire directory structure without prompting.
