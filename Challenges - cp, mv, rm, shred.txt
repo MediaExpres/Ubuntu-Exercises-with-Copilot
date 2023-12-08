@@ -162,6 +162,19 @@ student@ubuntu-22:~/linux/centos$
 Challenge #5
 Considering the solution from the previous challenge, remove the directory called updates from ubuntu directory.
  
+Copilot verified:
+tudent@ubuntu-22:~/linux/centos$ rm -r /home/student/linux/ubuntu/updates
+student@ubuntu-22:~/linux/centos$ tree ~/linux
+/home/student/linux
+├── centos
+│   ├── commands.txt
+│   ├── security.txt
+│   └── updates
+│       └── latest
+└── ubuntu
+    └── apt.txt
+3 directories, 4 files
+student@ubuntu-22:~/linux/centos$ 
 
 Challenge #6
 Considering the initial directory structure and using only one command copy the file called apt.txt and the directory called updates to linux directory.
