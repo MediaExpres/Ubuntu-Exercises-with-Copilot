@@ -217,6 +217,15 @@ student@ubuntu-22:~/linux/centos$
 Challenge #7
 Considering the solution from the previous challenge remove the file called apt.txt and the directory called updates from the linux directory interactively (by prompting the user).
 Copilot solution and try on:
+To remove the file called apt.txt and the directory called updates from the linux directory interactively (by prompting the user), you can use the `rm` command with the `-r` and `-i` options, which mean recursive and interactive, respectively. The syntax is `rm -r -i file_or_directory`. In this case, the file and directory are `/home/student/linux/apt.txt` and `/home/student/linux/updates`. So, the command would be:
+
+```bash
+rm -r -i /home/student/linux/apt.txt /home/student/linux/updates
+```
+
+This will ask you to confirm each deletion before removing the file or directory. You can type `y` to proceed or `n` to cancel. You can verify the result by using the `tree` command again.
+
+RESULT:
 rm: remove regular empty file '/home/student/linux/apt.txt'? y
 rm: descend into directory '/home/student/linux/updates'? y
 rm: remove regular empty file '/home/student/linux/updates/latest'? y
