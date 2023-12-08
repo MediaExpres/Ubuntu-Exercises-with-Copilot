@@ -143,6 +143,22 @@ cp -r /home/student/linux/centos/updates /home/student/linux/ubuntu
 
 This will copy the updates directory and its contents to the ubuntu directory. You can verify the result by using the `tree` command again.
 
+it works:
+student@ubuntu-22:~/linux/centos$ cp -r /home/student/linux/centos/updates /home/student/linux/ubuntu
+student@ubuntu-22:~/linux/centos$ tree ~/linux
+/home/student/linux
+├── centos
+│   ├── commands.txt
+│   ├── security.txt
+│   └── updates
+│       └── latest
+└── ubuntu
+    ├── apt.txt
+    └── updates
+        └── latest
+4 directories, 5 files
+student@ubuntu-22:~/linux/centos$
+
 Challenge #5
 Considering the solution from the previous challenge, remove the directory called updates from ubuntu directory.
  
