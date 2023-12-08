@@ -216,7 +216,24 @@ student@ubuntu-22:~/linux/centos$
 
 Challenge #7
 Considering the solution from the previous challenge remove the file called apt.txt and the directory called updates from the linux directory interactively (by prompting the user).
- 
+Copilot solution and try on:
+rm: remove regular empty file '/home/student/linux/apt.txt'? y
+rm: descend into directory '/home/student/linux/updates'? y
+rm: remove regular empty file '/home/student/linux/updates/latest'? y
+rm: remove directory '/home/student/linux/updates'? y
+student@ubuntu-22:~/linux/centos$ tree ~/linux
+/home/student/linux
+├── centos
+│   ├── commands.txt
+│   ├── security.txt
+│   └── updates
+│       └── latest
+└── ubuntu
+    └── apt.txt
+3 directories, 4 files
+
+
+
 Challenge #8
 Considering the initial directory structure, rename the directory called centos to redhat and then back to centos.
 
