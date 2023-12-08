@@ -188,7 +188,32 @@ The difference between rm -rf and rm -r in Ubuntu terminal is that the -f option
 
 Challenge #6
 Considering the initial directory structure and using only one command copy the file called apt.txt and the directory called updates to linux directory.
- 
+Copilot & check:
+To copy the file called apt.txt and the directory called updates to linux directory, you can use the `cp` command with the `-r` option, which means recursive. The syntax is `cp -r source destination`. In this case, the sources are `/home/student/linux/ubuntu/apt.txt` and `/home/student/linux/centos/updates`, and the destination is `/home/student/linux`. So, the command would be:
+
+```bash
+cp -r /home/student/linux/ubuntu/apt.txt /home/student/linux/centos/updates /home/student/linux
+```
+
+This will copy the apt.txt file and the updates directory and its contents to the linux directory. You can verify the result by using the `tree` command again.
+
+student@ubuntu-22:~/linux/centos$ cp -r /home/student/linux/ubuntu/apt.txt /home/student/linux/centos/updates /home/student/linux
+student@ubuntu-22:~/linux/centos$ tree ~/linux
+/home/student/linux
+├── apt.txt
+├── centos
+│   ├── commands.txt
+│   ├── security.txt
+│   └── updates
+│       └── latest
+├── ubuntu
+│   └── apt.txt
+└── updates
+    └── latest
+4 directories, 6 files
+student@ubuntu-22:~/linux/centos$ 
+
+
 Challenge #7
 Considering the solution from the previous challenge remove the file called apt.txt and the directory called updates from the linux directory interactively (by prompting the user).
  
