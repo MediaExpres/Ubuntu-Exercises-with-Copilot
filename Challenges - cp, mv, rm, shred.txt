@@ -241,10 +241,43 @@ student@ubuntu-22:~/linux/centos$ tree ~/linux
     └── apt.txt
 3 directories, 4 files
 
-
-
 Challenge #8
 Considering the initial directory structure, rename the directory called centos to redhat and then back to centos.
+
+Copilot solution:
+To rename the directory called centos to redhat and then back to centos, you can use the mv command, which means move or rename. The syntax is mv source destination. In this case, the source is /home/student/linux/centos and the destination is /home/student/linux/redhat. So, the command would be:
+mv /home/student/linux/centos /home/student/linux/redhat
+This will rename the centos directory to redhat. You can verify the result by using the tree command again.
+To rename the directory back to centos, you can use the same mv command, but with the source and destination reversed. In this case, the source is /home/student/linux/redhat and the destination is /home/student/linux/centos. So, the command would be:
+mv /home/student/linux/redhat /home/student/linux/centos
+This will rename the redhat directory back to centos. You can verify the result by using the tree command again.
+
+EXECUTION:
+student@ubuntu-22:~/linux/centos$ mv /home/student/linux/centos /home/student/linux/redhat
+student@ubuntu-22:~/linux/centos$ ls
+commands.txt  security.txt  updates
+student@ubuntu-22:~/linux/centos$ tree ~/linux
+/home/student/linux
+├── redhat
+│   ├── commands.txt
+│   ├── security.txt
+│   └── updates
+│       └── latest
+└── ubuntu
+    └── apt.txt
+3 directories, 4 files
+student@ubuntu-22:~/linux/centos$ mv /home/student/linux/redhat /home/student/linux/centos
+student@ubuntu-22:~/linux/centos$ tree ~/linux
+/home/student/linux
+├── centos
+│   ├── commands.txt
+│   ├── security.txt
+│   └── updates
+│       └── latest
+└── ubuntu
+    └── apt.txt
+3 directories, 4 files
+student@ubuntu-22:~/linux/centos$
 
 Challenge #9
 Considering the initial directory structure, copy the file called security.txt to ubuntu directory as sec.txt
