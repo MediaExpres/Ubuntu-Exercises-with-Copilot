@@ -178,6 +178,37 @@ As root set SUID to ls and list the contents of /root again as a non-privileged 
 Check the SUID permission set on ls
 As root remove the SUID bit.
 
+mihai-Legino verification of Copilot suggestions:
+
+- As a non-privileged user list the contents of /root using the ls command. See what will happen.
+mihai@mihai-Legion:~$ ls /root
+ls: cannot open directory '/root': Permission denied
+
+- As root set SUID to ls and list the contents of /root again as a non-privileged user.
+mihai@mihai-Legion:~$ chmod u+s /bin/ls #COPILOT solution does not work, because i used it not using ROOT!!!!
+chmod: changing permissions of '/bin/ls': Operation not permitted
+mihai@mihai-Legion:~$ ls -l /bin/ls
+-rwxr-xr-x 1 root root 138208 Feb  7  2022 /bin/ls
+
+miha-Legion tweak to the Copilot solution:
+mihai@mihai-Legion:~$ sudo chmod u+s /bin/ls # running aas privileged user works!!!
+[sudo] password for mihai:         
+mihai@mihai-Legion:~$ ls /root
+mihai@mihai-Legion:~$ ls -l /bin/ls
+-rwsr-xr-x 1 root root 138208 Feb  7  2022 /bin/ls
+
+Andrei course solution is: # sudo chmod 4755 /usr/bin/ls 
+
+- Check the SUID permission set on ls
+mihai@mihai-Legion:~$ ls -l /bin/ls
+-rwsr-xr-x 1 root root 138208 Feb  7  2022 /bin/ls
+
+- As root remove the SUID bit.
+mihai@mihai-Legion:~$ sudo chmod u-s /bin/ls
+mihai@mihai-Legion:~$ ls -l /bin/ls
+-rwxr-xr-x 1 root root 138208 Feb  7  2022 /bin/ls
+
+Andrei course solution is: # sudo chmod 0755 /usr/bin/ls
 
 Challenge #7
 
