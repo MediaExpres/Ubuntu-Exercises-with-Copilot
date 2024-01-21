@@ -1,0 +1,10 @@
+Create a directory with a regular file in it. Work as a non-privileged user.
+# mkdir linux
+# echo "This is Ubuntu" > linux/ubuntu.txt
+# tree linux/
+linux/
+|_____ubuntu.txt
+
+0 directories, 1 file
+
+Based on the above image answer the following questions:
