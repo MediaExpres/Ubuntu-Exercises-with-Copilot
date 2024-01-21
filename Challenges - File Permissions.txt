@@ -33,3 +33,18 @@ Change: 2024-01-21 11:13:40.777904387 +0200
 
 Remove the read permission of ubuntu.txt for the owner and check if the owner can read the file.
 
+Copilot: 
+# chmod u-r linux/ubuntu.txt
+# ls -l linux/ubuntu.txt
+--w-r----- 1 root root 15 Jan 21 11:05 linux/ubuntu.txt !!! small error in copilot answer in the --w-r-... instead of --w-rw... succesion:
+
+mihai@mihai-Legion-Y540-17IRH:~$ ls -l linux/ubuntu.txt
+--w-rw---- 1 mihai mihai 15 Jan 21 11:08 linux/ubuntu.txt
+
+# cat linux/ubuntu.txt
+cat: linux/ubuntu.txt: Permission denied
+
+This goes well: 
+mihai@mihai-Legion-Y540-17IRH:~$ cat linux/ubuntu.txt
+cat: linux/ubuntu.txt: Permission denied
+
