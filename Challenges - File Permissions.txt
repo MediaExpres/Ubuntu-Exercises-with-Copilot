@@ -142,6 +142,34 @@ Challenge #5
 
 Set the permissions of all the files in the user's home directory to 0640 and the permissions of all directories to 0750.
 
+COPILOT solution:
+Open a terminal and navigate to your home directory. You can do this by running the command cd ~.
+To set the permissions of all the files to 0640, run the command find . -type f -exec chmod 0640 {} \;. 
+This will find all the regular files (-type f) in the current directory and its subdirectories (.), and execute the chmod 0640 command 
+on each file (-exec chmod 0640 {} \;). The 0640 expression means to grant read and write permissions (4 + 2) to the owner, read permission 
+(4) to the group, and no permissions (0) to others.
+To set the permissions of all the directories to 0750, run the command find . -type d -exec chmod 0750 {} \;. 
+This will find all the directories (-type d) in the current directory and its subdirectories (.), and execute the chmod 0750 command on each 
+directory (-exec chmod 0750 {} \;). The 0750 expression means to grant read, write, and execute permissions (4 + 2 + 1) to the owner, 
+read and execute permissions (4 + 1) to the group, and no permissions (0) to others.
+You can verify the changes by running the command ls -lR. This will list the files and directories in the current directory and its subdirectories 
+recursively (-lR), along with their permissions, owner, group, size, date, and name.
+
+mihai-Legion execution of COPILOT solution:
+Tricky question because first one should run the 0750 command to directories else it won't work:
+mihai@mihai-Legion:~$ cd ~
+mihai@mihai-Legion:~$ find . -type f -exec chmod 0640 {} \;
+chmod: cannot access './linux/ubuntu.txt': Permission denied
+^C
+mihai@mihai-Legion:~$ sudo find . -type f -exec chmod 0640 {} \;
+[sudo] password for mihai:         
+^C
+mihai@mihai-Legion:~$ find . -type d -exec chmod 0775 {} \;
+mihai@mihai-Legion:~$ find . -type f -exec chmod 0640 {} \;
+
+# here it worked, while the difference between Copilot and Andrei course solution is: find . vs. find ~ addressed by Copilot going first in cd ~ . (The difference between find . and find ~ in Linux Mint is that find . will start the search in the current directory, while find ~ will start the search in the user’s home directory. The . symbol represents the current directory, and the ~ symbol represents the user’s home directory. For example, if you are in the /etc directory and run find . -name "hosts", it will look for files named “hosts” in the /etc directory and its subdirectories. But if you run find ~ -name "hosts", it will look for files named “hosts” in your home directory (such as /home/mihai) and its subdirectories.)
+
+
 
 Challenge #6
 
