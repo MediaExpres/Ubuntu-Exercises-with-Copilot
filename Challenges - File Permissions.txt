@@ -28,3 +28,8 @@ Access: 2024-01-21 11:08:13.519208226 +0200
 Modify: 2024-01-21 11:08:13.519208226 +0200
 Change: 2024-01-21 11:13:40.777904387 +0200
  Birth: 2024-01-21 11:08:13.519208226 +0200
+
+ Challenge #2
+
+Remove the read permission of ubuntu.txt for the owner and check if the owner can read the file.
+
