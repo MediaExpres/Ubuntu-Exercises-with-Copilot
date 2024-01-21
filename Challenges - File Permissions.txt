@@ -108,6 +108,35 @@ Challenge #4
 
 Set the permissions of the directory to 0667. Check if the user (owner) can list its contents, move to the directory and remove it.
 
+Copilot solution:
+# chmod 0667 linux
+# ls -ld linux
+drw-rw-rwx 2 root root 4096 Jan 21 11:05 linux
+
+and to verify:
+# ls linux
+ls: cannot open directory 'linux': Permission denied
+# cd linux
+-bash: cd: linux: Permission denied
+# rm -r linux
+rm: cannot remove 'linux': Permission denied
+
+mihai-Legion execution:
+mihai@mihai-Legion:~$ chmod 0667 linux
+mihai@mihai-Legion:~$ ls -ld linux
+drw-rw-rwx 2 mihai mihai 4096 Jan 21 11:08 linux
+
+and verify the verification:
+ihai@mihai-Legion:~$ ls linux
+ls: cannot access 'linux/ubuntu.txt': Permission denied
+ubuntu.txt
+mihai@mihai-Legion:~$ cd linux
+bash: cd: linux: Permission denied
+mihai@mihai-Legion:~$ rm -r linux
+rm: cannot remove 'linux/ubuntu.txt': Permission denied
+rm: cannot remove 'linux': Directory not empty
+
+
 
 Challenge #5
 
