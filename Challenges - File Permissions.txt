@@ -51,3 +51,50 @@ cat: linux/ubuntu.txt: Permission denied
 Challenge #3
 
 Using the octal notation, set the permissions of the directory to rwxrwx--- and of the file to rw-r-----
+
+Copilot solution:
+
+# chmod 770 linux
+# chmod 640 linux/ubuntu.txt
+# ls -l linux
+total 4
+-rw-r----- 1 root root 15 Jan 21 11:05 ubuntu.txt
+# ls -ld linux
+drwxrwx--- 2 root root 4096 Jan 21 11:05 linux
+
+Verification goes wooble but correct in the end:
+mihai@mihai-Legion-Y540-17IRH:~$ chmod 770 linux
+mihai@mihai-Legion-Y540-17IRH:~$ ls -l linux
+total 4
+--w-rw---- 1 mihai mihai 15 Jan 21 11:08 ubuntu.txt
+mihai@mihai-Legion-Y540-17IRH:~$ cmod 640 linuc/ubuntu.txt
+Command 'cmod' not found, did you mean:
+  command 'kmod' from deb kmod (29-1ubuntu1)
+  command 'mod' from deb monodoc-base (6.8.0.105+dfsg-3.2)
+  command 'cmsd' from deb xrootd-server (5.4.1-1)
+  command 'qmod' from deb gridengine-client (8.1.9+dfsg-10build1)
+  command 'chmod' from deb coreutils (8.32-4.1ubuntu1)
+  command 'jmod' from deb openjdk-11-jdk-headless (11.0.20.1+1-0ubuntu1~22.04)
+  command 'jmod' from deb openjdk-17-jdk-headless (17.0.8.1+1~us1-0ubuntu1~22.04)
+  command 'jmod' from deb openjdk-18-jdk-headless (18.0.2+9-2~22.04)
+  command 'jmod' from deb openjdk-19-jdk-headless (19.0.2+7-0ubuntu3~22.04)
+Try: sudo apt install <deb name>
+mihai@mihai-Legion-Y540-17IRH:~$ chmod 640 linux/ubuntu.txt
+mihai@mihai-Legion-Y540-17IRH:~$ ls -l linux
+total 4
+-rw-r----- 1 mihai mihai 15 Jan 21 11:08 ubuntu.txt
+mihai@mihai-Legion-Y540-17IRH:~$ ls -ld linux
+drwxrwx--- 2 mihai mihai 4096 Jan 21 11:08 linux
+
+*** now I did changed the hostname from mihai-Legion-Y540-17IRH to mihai-Legion with the following Copilot succesfull instruction:
+To change the machine name in Linux Mint, you need to edit two files: /etc/hostname and /etc/hosts. These files store the current name of your computer and the mapping between host names and IP addresses. You can use any text editor to modify these files, but you need root privileges to do so. Here are the steps to follow:
+Open a terminal and run the command sudo xed /etc/hostname. This will open the file with the default text editor in Linux Mint Cinnamon. If you are using a different desktop environment, you may need to replace xed with another editor, such as nano or vi.
+In the file, replace the current name mihai-Legion-Y540-17IRH with the new name mihai-Legion and save the file.
+Next, run the command sudo xed /etc/hosts. This will open the file that contains the mapping between host names and IP addresses. You need to change the lines that refer to the old name mihai-Legion-Y540-17IRH to the new name mihai-Legion. For example, you may see something like this:
+127.0.0.1 localhost
+127.0.1.1 mihai-Legion-Y540-17IRH
+Change the second line to:
+127.0.1.1 mihai-Legion
+Save the file and exit the editor.
+Finally, you need to update the system with the new name. You can do this by running the command hostname mihai-Legion. This will set the current host name to mihai-Legion without rebooting. Alternatively, you can restart your computer to apply the changes.
+***
