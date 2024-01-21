@@ -103,3 +103,33 @@ Change the second line to:
 Save the file and exit the editor.
 Finally, you need to update the system with the new name. You can do this by running the command hostname mihai-Legion. This will set the current host name to mihai-Legion without rebooting. Alternatively, you can restart your computer to apply the changes.
 ***
+
+Challenge #4
+
+Set the permissions of the directory to 0667. Check if the user (owner) can list its contents, move to the directory and remove it.
+
+
+Challenge #5
+
+Set the permissions of all the files in the user's home directory to 0640 and the permissions of all directories to 0750.
+
+
+Challenge #6
+
+As a non-privileged user list the contents of /root using the ls command. See what will happen.
+As root set SUID to ls and list the contents of /root again as a non-privileged user.
+Check the SUID permission set on ls
+As root remove the SUID bit.
+
+
+Challenge #7
+
+Set the directory permissions to 0777 and the file permissions to 0000. As another non-privileged user, try to remove the file.
+Create a new file in the directory and set its permissions to 0644.
+Set the Sticky Bit on the directory. 
+As another non-privileged user, try to remove the file.
+
+
+Challenge #8
+
+Change the owner and the group owner of all files in the current user home directory to the current user and its primary group.
