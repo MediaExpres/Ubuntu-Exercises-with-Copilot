@@ -1,3 +1,8 @@
+NOTE: using Linux Mint System:
+  Desktop: Cinnamon 6.0.4 Distro: Linux Mint 21.3 Virginia base: Ubuntu 22.04 jammy
+
+Prerequisite:
+
 Create a directory with a regular file in it. Work as a non-privileged user.
 # mkdir linux
 # echo "This is Ubuntu" > linux/ubuntu.txt
