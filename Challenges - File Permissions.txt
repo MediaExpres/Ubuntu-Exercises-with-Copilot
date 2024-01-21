@@ -217,6 +217,78 @@ Create a new file in the directory and set its permissions to 0644.
 Set the Sticky Bit on the directory. 
 As another non-privileged user, try to remove the file.
 
+Copilot verification by mihai-Legion:
+- Set the directory permissions to 0777 and the file permissions to 0000. As another non-privileged user, try to remove the file.
+I used a tilda before directory, ~, missing in the Copilot solution:
+mihai@mihai-Legion:~$ chmod 0777 /linux
+chmod: cannot access '/linux': No such file or directory
+mihai@mihai-Legion:~$ ls
+Desktop    Downloads  Music     Public     Videos
+Documents  linux      Pictures  Templates
+mihai@mihai-Legion:~$ cd linux
+mihai@mihai-Legion:~/linux$ cd..
+cd..: command not found
+mihai@mihai-Legion:~/linux$ cd
+mihai@mihai-Legion:~$ chmod 0777 ~/linux
+mihai@mihai-Legion:~$ chmod 0000 ~/linux/ubuntu.txt
+mihai@mihai-Legion:~$ ls -l linux
+total 4
+---------- 1 mihai mihai 15 Jan 21 11:08 ubuntu.txt
+mihai@mihai-Legion:~$ ls -ld linux
+drwxrwxrwx 2 mihai mihai 4096 Jan 21 11:08 linux
+
+mihai@mihai-Legion:~$ rm ~/linux/ubuntu.txt
+rm: remove write-protected regular file '/home/mihai/linux/ubuntu.txt'
+
+- Create a new file in the directory and set its permissions to 0644.
+Copilot was suggesting two separate commands, one with touch and the second with chmod:
+
+mihai@mihai-Legion:~$ touch chmod 0644 ~/linux/newfile.txt
+mihai@mihai-Legion:~$ ls -l ~/linux
+total 4
+-rw-rw-r-- 1 mihai mihai  0 Jan 21 13:14 newfile.txt
+---------- 1 mihai mihai 15 Jan 21 11:08 ubuntu.txt
+ 
+- Set the Sticky Bit on the directory. 
+mihai@mihai-Legion:~$ chmod +t linux
+mihai@mihai-Legion:~$ ls -ld linux
+drwxrwxrwt 2 mihai mihai 4096 Jan 21 13:14 linux
+
+Here Andrei add setting directory chmod to 1777
+
+- As another non-privileged user, try to remove the file.
+COPILOT DOES NOT ADDRESS THE NON-PRIVILEGED USER SWITCH:
+-------
+# chmod +t linux
+# ls -ld linux
+drwxrwxrwt 2 root root 4096 Jan 21 11:10 linux
+
+To remove the file as another non-privileged user, you can use the rm command. However, since the directory has the Sticky Bit set, the command will fail with a permission denied error, unless the user is the owner of the file. For example:
+
+$ rm linux/newfile.txt
+rm: cannot remove 'linux/newfile.txt': Permission denied
+--------
+mihai-Legion verification:
+mihai@mihai-Legion:~$ rm linux/newfile.txt
+mihai@mihai-Legion:~$ ls linux/newfile.txt
+ls: cannot access 'linux/newfile.txt': No such file or directory
+mihai@mihai-Legion:~$ ls ~/linux/newfile.txt
+ls: cannot access '/home/mihai/linux/newfile.txt': No such file or directory
+mihai@mihai-Legion:~$ ls
+0644  chmod  Desktop  Documents  Downloads  linux  Music  Pictures  Public  Templates  Videos
+mihai@mihai-Legion:~$ cd linux
+mihai@mihai-Legion:~/linux$ ls
+ubuntu.txt
+mihai@mihai-Legion:~/linux$ 
+
+Final resolve works:
+
+mihai@mihai-Legion:~$ su jane
+Password: 
+$ rm linux/newfile.txt
+rm: remove write-protected regular empty file 'linux/newfile.txt'? y
+rm: cannot remove 'linux/newfile.txt': Operation not permitted
+
 
 Challenge #8
 
