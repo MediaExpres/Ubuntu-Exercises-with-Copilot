@@ -48,3 +48,6 @@ This goes well:
 mihai@mihai-Legion-Y540-17IRH:~$ cat linux/ubuntu.txt
 cat: linux/ubuntu.txt: Permission denied
 
+Challenge #3
+
+Using the octal notation, set the permissions of the directory to rwxrwx--- and of the file to rw-r-----
