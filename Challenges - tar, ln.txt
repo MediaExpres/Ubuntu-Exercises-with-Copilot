@@ -3,3 +3,24 @@ Challenge #1
 Using tar, create an archive of /etc in the current directory.
 Display the contents of the archive searching for a specific file in the archive.
 Extract the archive in the current directory.
+
+COPILOT solution:
+Here are the steps to complete the challenge:
+
+To create an archive of /etc in the current directory, use the following command:
+sudo tar -cvzf etc_archive.tar.gz /etc                                                      # Andrei solution is: sudo tar -cvz etc.tar /etc which throws error:
+This will create an archive named etc_archive.tar.gz in the current directory.              mihai@mihai-Legion:~$ sudo tar -cvz etc.tar /etc
+                                                                                            tar: Refusing to write archive contents to terminal (missing -f option?)
+                                                                                            tar: Error is not recoverable: exiting now
+
+To display the contents of the archive and search for a specific file, use the following command:
+tar -tvf etc_archive.tar.gz | grep <file_name>
+
+Replace <file_name> with the name of the file you want to search for. This command will display the contents of the archive and search for the specified file.
+
+To extract the archive in the current directory, use the following command:
+tar -xvzf etc_archive.tar.gz -C .
+
+This will extract the archive in the current directory.
+
+Please note that the sudo command is used in step 1 to ensure that all files in /etc are readable by the user. Also, the -C option in step 3 is used to extract the archive in the current directory. If you want to extract the archive in a different directory, replace . with the path of the directory where you want to extract the archive.
