@@ -11,7 +11,7 @@ To create an archive of /etc in the current directory, use the following command
 sudo tar -cvzf etc_archive.tar.gz /etc                                                      # Andrei solution is: sudo tar -cvz etc.tar /etc which throws error:
 This will create an archive named etc_archive.tar.gz in the current directory.              mihai@mihai-Legion:~$ sudo tar -cvz etc.tar /etc
                                                                                             tar: Refusing to write archive contents to terminal (missing -f option?)
-                                                                                            tar: Error is not recoverable: exiting now
+                                                                                            tar: Error is not recoverable: exiting now => adding f solve it
 
 To display the contents of the archive and search for a specific file, use the following command:
 tar -tvf etc_archive.tar.gz | grep <file_name>
