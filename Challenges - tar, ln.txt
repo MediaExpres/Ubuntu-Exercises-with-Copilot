@@ -14,7 +14,13 @@ This will create an archive named etc_archive.tar.gz in the current directory.  
                                                                                             tar: Error is not recoverable: exiting now => adding f solve it
 
 To display the contents of the archive and search for a specific file, use the following command:
-tar -tvf etc_archive.tar.gz | grep <file_name>
+tar -tvf etc_archive.tar.gz | grep <file_name>                                              # Andrei solution is: tar -tvf etc.tar /etc | grep passwd
+mihai@mihai-Legion:~$ tar -tvf etc.tar etc | grep passwd
+-rw-r--r-- root/root      2959 2024-01-18 18:04 etc/passwd-
+-rw-r--r-- root/root        92 2021-11-11 17:42 etc/pam.d/chpasswd
+-rw-r--r-- root/root        92 2021-11-11 17:42 etc/pam.d/passwd
+-rw------- root/root         0 2024-01-09 14:59 etc/security/opasswd
+-rw-r--r-- root/root      2996 2024-01-21 13:36 etc/passwd
 
 Replace <file_name> with the name of the file you want to search for. This command will display the contents of the archive and search for the specified file.
 
