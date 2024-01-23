@@ -1,0 +1,5 @@
+Challenge #1
+
+Using tar, create an archive of /etc in the current directory.
+Display the contents of the archive searching for a specific file in the archive.
+Extract the archive in the current directory.
